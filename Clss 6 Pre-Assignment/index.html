@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/style.css">
+    <title>WARRI AIRPORT</title>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <div class="header-container">
+                <div class="logo"><img src="./images/Delta-Logo.png" alt="Logo Img"></div>
+                <div class="menu">
+                    <nav>
+                        <ul>
+                            <li>
+                                <a href="#welcome">Home</a>
+                            </li>
+                            <li>
+                                <a href="#service">Services</a>
+                            </li>
+                            <li>
+                                <a href="#catalogue">Catalogue</a>
+                            </li>
+                            <li>
+                                <a href="#about-us">About</a>
+                            </li>
+                            <li>
+                                <a href="#contact-us">Contact</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="book"><input type="button" value="Book Flight" class="btn"></div>
+                <div class="socials">
+                    <a href="#"><img src="./images/facebook-32x32-721949.png" alt="FACEBOOK"></a>
+                    <a href="#"><img src="./images/twitter-32x32-721979.png" alt="TWITTER"></a>
+                    <a href="#"><img src="./images/whatsapp-32x32-721985.png" alt="WHATSAPP"></a>
+                    <a href="#"><img src="./images/instagram-32x32-721958.png" alt="INSTAGRAM"></a>
+                </div>
+            </div>
+        </header>
+        <main>
+            <div id="welcome">
+                <h2>Welcome to Warri Airport, Osubi</h2>
+                <div class="full-screen" style="max-width:500px">
+                    <img class="mySlides" src="/images/images (47).jpeg" style="width:100%">
+                    <img class="mySlides" src="./images/images (48).jpeg" style="width:100%">
+                    <img class="mySlides" src="./images/images (49).jpeg" style="width:100%">
+
+                </div>
+
+            </div>
+            <div class="idContainer">
+                <h2 id="service">We offer the following services:</h2>
+                <div id="services">
+                    <div>
+                        <img src="./images/first class.jpg" alt="First Class">
+                        <p>First Class</p>
+                    </div>
+                    <div>
+                        <img src="./images/business class.jpg" alt="Business Class">
+                        <p>Business Class</p>
+                    </div>
+                    <div>
+                        <img src="./images/economy class.jpg" alt="Economy">
+                        <p>Economy</p>
+                    </div>
+                    <div>
+                        <img src="./images/cargo.jpg" alt="eCommerce">
+                        <p>eCommerce</p>
+                    </div>
+                    <div>
+                        <img src="./images/private chatter.jpg" alt="Private Chatter">
+                        <p>Private Chatter</p>
+                    </div>
+                    <div>
+                        <img src="./images/private hanggar.jpg" alt="Private Hangar">
+                        <p>Private Hangar</p>
+                    </div>
+                </div>
+            </div>
+            <div class="idContainer">
+                <h2>Our Planes</h2>
+                <div id="catalogue">
+                    <div>
+                        <img src="/images/Airplane.jpg" alt="Airbus">
+                    </div>
+                    <div>
+                        <img src="./images/airport-terminal.jpg" alt="Boeing">
+                    </div>
+                    <div>
+                        <img src="./images/images (50).jpeg" alt="Airbus">
+                    </div>
+                </div>
+            </div>
+            <div id="newsletter">
+                <h2>Newsletter</h2>
+                <p>Keep up to date with all our services and operations by subscribing to our newsletter service</p>
+                <input type="email" name="email" id="email" placeholder="example@email.com"><input type="button" value="Subscribe" class="btn">
+                <div>
+                    <p><img src="./images/call-16x16-1214404.png" alt="call us"> +234 (803)<span>(2367)</span>-(9834)</p>
+                </div>
+            </div>
+        </main>
+        <footer>
+            <div class="footer-container">
+                <div id="about-us">
+                    <h2>ABOUT</h2>
+
+                    <p>We offer the most affordable air fare both locally and internationally.</p>
+                    <p>Our services are top notch and we have an A++ aviation rating from the I.A.A.F</p>
+                    <p>Our flights are safe and comfortable. Taking care of you and your luggages to make sure you are safe and happy is our utmost priority.</p>
+                    <p>Join us today for the most enjoyable flight experience</p>
+                    <div class="book"><input type="button" value="Book Flight" class="btn"></div>
+                </div>
+                <div class="quick-links">
+                    <h2>Quick Links</h2>
+                    <li>
+                        <a href="./index.html">Home</a>
+                    </li>
+                    <li>
+                        <a href="#about-us">About</a>
+                    </li>
+                    <li>
+                        <a href="#service">Services</a>
+                    </li>
+                    <li>
+                        <a href="#catalogue">Our Planes</a>
+                    </li>
+                    <li>
+                        <a href="#contact-us">Contact</a>
+                    </li>
+                </div>
+                <div id="contact-us">
+                    <h2>CONTACT US</h2>
+
+                    <textarea name="message" id="message" cols="30" rows="7" placeholder="Write here..."></textarea>
+                    <input type="button" value="Send" class="btn">
+                </div>
+            </div>
+            <div class="copyright">&copy; 2021 | Incubator Nigeria and Champions Cathedral Family</div>
+        </footer>
+    </div>
+
+    <script>
+        var myIndex = 0;
+        carousel();
+
+        function carousel() {
+            var i;
+            var x = document.getElementsByClassName("mySlides");
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            myIndex++;
+            if (myIndex > x.length) {
+                myIndex = 1
+            }
+            x[myIndex - 1].style.display = "block";
+            setTimeout(carousel, 2000); // Change image every 2 seconds
+        }
+    </script>
+
+</body>
+
+</html>
